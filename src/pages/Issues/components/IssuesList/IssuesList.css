@@ -1,3 +1,7 @@
 .issueList {
     margin: 32px;
 }
+
+.loader {
+    opacity: 0.3
+}

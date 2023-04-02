@@ -14,14 +14,17 @@
     display: flex;
 }
 
+.closeCount,
 .openCount {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .open {
     margin-left: 6px;
     margin-right: 8px;
+
 }
 
 .active {
