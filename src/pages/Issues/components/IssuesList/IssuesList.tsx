@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from 'react'
+import React, { useContext, useMemo } from 'react'
 import { BASE_URL } from '../../constants'
 import { FilterContext } from '../../context/FilterContext'
 import { useFetch } from '../../hooks/useFetch'

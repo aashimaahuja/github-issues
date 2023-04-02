@@ -19,10 +19,10 @@ export const useFetch = (url: string) => {
   useEffect(() => {
     setIsLoading(true)
     fetch(url, {
-      headers: {
-        'Accept': 'application/vnd.github.v3+json',
-        'Authorization': `token ${token}`
-      }
+      // headers: {
+      //   'Accept': 'application/vnd.github.v3+json',
+      //   'Authorization': `token ${token}`
+      // }
     })
       .then((res) => res.json())
       .then((data) => {

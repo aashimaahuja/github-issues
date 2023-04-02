@@ -2,7 +2,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import { Issues } from './pages/Issues/Issues';
 import './App.css'
 import { Header } from './common/components/Header/Header';
-import { IssueDetails } from './pages/Issues/components/IssueDetails/IssueDetails';
+import { IssueDetails } from './pages/IssueDetails/IssueDetails';
 
 function App() {
   return (
