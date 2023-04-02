@@ -1,6 +1,7 @@
-import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils'
 import React, { useEffect, useState } from 'react'
 import { Issue } from '../Issue/Issue'
+import { IssuesListHeader } from '../IssuesListHeader/IssuesListHeader'
+import './IssuesList.css'
 
 const token = `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`
 
@@ -10,6 +11,7 @@ type Issue = {
   body: string,
   labels: Array<any>,
   comments: number,
+  state: 'open' | 'closed'
 }
 
 export const IssuesList: React.FC = () => {
@@ -35,10 +37,11 @@ export const IssuesList: React.FC = () => {
   console.log(issues)
 
   return (
-    <div>
+    <div className="issueList">
+      <IssuesListHeader openCount={241} closeCount={1771} />
       {
-        issues.map(({ title, body, labels, id, comments }) =>
-          <Issue key={id} title={title} description={body} labels={labels} comments={comments} />)
+        issues.map(({ title, body, labels, id, comments, state }) =>
+          <Issue key={id} title={title} description={body} labels={labels} comments={comments} state={state} />)
       }
     </div>
   )

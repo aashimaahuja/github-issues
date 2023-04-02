@@ -1,0 +1,12 @@
+.appHeader {
+    background-color: #24292f;
+    display: flex;
+    align-items: center;
+    padding: 16px
+}
+
+.headerTitle {
+    color: white;
+    margin: 0;
+    margin-left: 12px;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Issue.css'
 import { ReactComponent as OpenIssueIcon } from '../../icons/open-issue.svg';
+import { ReactComponent as ClosedIssueIcon } from '../../icons/closed.svg';
 import { ReactComponent as CommentsIcon } from '../../icons/comment.svg';
 import { Label } from '../Label/Label';
 
@@ -15,14 +16,15 @@ type Props = {
   description: string,
   labels: Array<IssueLabel>,
   comments: number,
+  state: "open" | "closed"
 }
 
-export const Issue: React.FC<Props> = ({ title, description, labels, comments }) => {
+export const Issue: React.FC<Props> = ({ title, description, labels, comments, state }) => {
   return (
     <div className='container'>
       <div style={{ display: 'flex' }}>
         <div className='openIssueIcon'>
-          <OpenIssueIcon />
+          {state === 'open' ? <OpenIssueIcon /> : <ClosedIssueIcon />}
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', marginRight: '8px' }}>
           <h4 className='title'>{title}</h4>

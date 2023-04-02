@@ -1,0 +1,30 @@
+.header {
+    border: 1px solid #d0d7de;
+    border-bottom: 0.5px;
+    border-radius: 6px 6px 0px 0px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #f6f8fa;
+    justify-content: space-between;
+    color: rgb(101, 109, 118);
+}
+
+.issuesCount {
+    display: flex;
+}
+
+.openCount {
+    display: flex;
+    align-items: center;
+}
+
+.open {
+    margin-left: 6px;
+    margin-right: 8px;
+}
+
+.active {
+    color: black;
+    font-weight: bold;
+}
