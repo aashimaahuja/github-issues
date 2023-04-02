@@ -1,15 +1,18 @@
-import { IssuesList } from './pages/Issues/components/IssuesList/IssuesList';
-import { Header } from './pages/Issues/components/Header/Header';
-import { FilterContext } from './pages/Issues/context/FilterContext';
-import { FilterContextProvider } from './pages/Issues/context/FilterContextProvider';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { Issues } from './pages/Issues/Issues';
+import './App.css'
+import { Header } from './common/components/Header/Header';
+import { IssueDetails } from './pages/Issues/components/IssueDetails/IssueDetails';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <FilterContextProvider>
-        <IssuesList />
-      </FilterContextProvider>
+      <Routes>
+        <Route path='/' element={<Navigate to="/issues" />} />
+        <Route path="/issues" element={<Issues />} />
+        <Route path="/issues/:issueId" element={<IssueDetails />} />
+      </Routes>
     </div>
   );
 }

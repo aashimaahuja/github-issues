@@ -1,13 +1,13 @@
 .header {
-    border: 1px solid #d0d7de;
+    border: 1px solid var(--secondary-border-color);
     border-bottom: 0.5px;
     border-radius: 6px 6px 0px 0px;
     padding: 16px;
     display: flex;
     align-items: center;
-    background-color: #f6f8fa;
+    background-color: var(--secondary-bg-color);
     justify-content: space-between;
-    color: rgb(101, 109, 118);
+    color: var(--secondary-text-color);
 }
 
 .issuesCount {

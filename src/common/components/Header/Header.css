@@ -1,5 +1,5 @@
 .appHeader {
-    background-color: #24292f;
+    background-color: var(--main-bg-color);
     display: flex;
     align-items: center;
     padding: 16px
