@@ -11,14 +11,14 @@ export const IssuesList: React.FC = () => {
   const url = useMemo(() =>
     `${BASE_URL}?state=${issueState}`
     , [issueState]);
-  const { issuesData, isLoading, isError } = useFetch(url);
+  const { issuesData, isLoading, isError, errorMessage } = useFetch(url);
+
+  if (isError) {
+    return <h4>{errorMessage}</h4>
+  }
 
   if (issuesData.length === 0 && !isLoading) {
     return <div>No issues found</div>
-  }
-
-  if (isError) {
-    return <h4>Some error message</h4>
   }
 
   return (
